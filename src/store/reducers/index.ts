@@ -1,3 +1,3 @@
-import products from './products';
+import resources from './resources';
 
-export { products };
+export { resources };

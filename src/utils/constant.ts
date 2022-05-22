@@ -1,6 +1,5 @@
-export const PRODUCT_ACTION = {
-  SET_PRODUCTS: 'products.set',
-  UPDATE_PRODUCT: 'products.update',
-  OVERWRITE_PRODUCT: 'products.overwrite',
-  DELETE_PRODUCT: 'products.delete',
+export const RESOURCE_NAME = {
+  CARTS: 'carts',
+  PRODUCTS: 'products',
+  USERS: 'users',
 } as const;
