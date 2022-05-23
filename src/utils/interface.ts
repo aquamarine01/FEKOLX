@@ -1,4 +1,6 @@
-import { RESOURCE_NAME } from './constant';
+import IonicIcon from "react-native-vector-icons/Ionicons";
+import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
+import { RESOURCE_NAME } from "./constant";
 
 export type ResourceName = typeof RESOURCE_NAME[keyof typeof RESOURCE_NAME];
 
@@ -65,3 +67,16 @@ export interface IResources {
   products: FlexibleResource<IProduct>;
   users: FlexibleResource<IUser>;
 }
+
+export type HomeStack = {
+  Home: {
+    screen?: keyof HomeStack;
+  };
+  Detail: {
+    productId: number;
+    screen?: keyof HomeStack;
+  };
+};
+
+export type FontAwesomeProps = typeof FontAwesomeIcon.prototype.props;
+export type IonicIconProps = typeof IonicIcon.prototype.props;
