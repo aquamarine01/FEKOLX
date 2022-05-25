@@ -1,6 +1,8 @@
-import IonicIcon from "react-native-vector-icons/Ionicons";
-import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
-import { RESOURCE_NAME } from "./constant";
+import React from 'react';
+import IonicIcon from 'react-native-vector-icons/Ionicons';
+import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
+import { StackScreenProps } from '@react-navigation/stack';
+import { RESOURCE_NAME } from './constant';
 
 export type ResourceName = typeof RESOURCE_NAME[keyof typeof RESOURCE_NAME];
 
@@ -78,5 +80,9 @@ export type HomeStack = {
   };
 };
 
+export type HomeProps<T extends keyof HomeStack> = StackScreenProps<HomeStack, T>;
+
 export type FontAwesomeProps = typeof FontAwesomeIcon.prototype.props;
 export type IonicIconProps = typeof IonicIcon.prototype.props;
+
+export type ReactSetter<T> = React.Dispatch<React.SetStateAction<T>>;

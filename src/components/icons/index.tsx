@@ -1,9 +1,10 @@
-import Diamond from "./Diamond";
-import Electronics from "./Electronic";
-import MenClothing from "./MenClothing";
-import WomenClothing from "./WomenClothing";
-import { CATEGORY } from "utils/constant";
-import { FontAwesomeProps } from "utils/interface";
+import React from 'react';
+import Diamond from './Diamond';
+import Electronics from './Electronic';
+import MenClothing from './MenClothing';
+import WomenClothing from './WomenClothing';
+import { CATEGORY } from 'utils/constant';
+import { FontAwesomeProps } from 'utils/interface';
 
 const CategoryIcon = ({ category, ...props }: Props) => {
   const getIcons = () => {
@@ -19,13 +20,16 @@ const CategoryIcon = ({ category, ...props }: Props) => {
 
       case CATEGORY.WOMEN_CLOTHING:
         return <WomenClothing {...props} />;
+
+      default:
+        return null;
     }
   };
 
   return getIcons();
 };
 
-type Props = FontAwesomeProps & {
+type Props = Omit<FontAwesomeProps, 'name'> & {
   category: typeof CATEGORY[keyof typeof CATEGORY];
 };
 
