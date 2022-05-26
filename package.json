@@ -17,6 +17,7 @@
     "@rneui/themed": "^4.0.0-rc.3",
     "axios": "^0.27.2",
     "lodash": "^4.17.21",
+    "next-rn-global-props": "^1.0.3-beta2",
     "react": "17.0.2",
     "react-native": "0.68.2",
     "react-native-dotenv": "^3.3.1",
