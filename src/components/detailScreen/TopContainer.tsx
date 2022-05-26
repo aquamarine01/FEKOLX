@@ -16,8 +16,8 @@ const TopContainer = ({ navigation }: Props) => {
           style={{ paddingLeft: 15 }}
         />
         <AppTitle
-          paddingTop={15}
-          paddingBottom={15}
+          paddingTop={5}
+          paddingBottom={5}
           paddingLeft={10}
           color={COLOR_SCHEME.DARK_BLUE}
           textAlign={'left'}

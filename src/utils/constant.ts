@@ -47,3 +47,15 @@ export const DIMENSION = {
   HEIGHT: Dimensions.get('window').height,
   PADDING_HORIZONTAL: 10,
 };
+
+export const FONTS = {
+  KOULEN_REGULAR: 'Koulen-Regular',
+  UBUNTU_BOLD: 'Ubuntu-Bold',
+  UBUNTU_BOLD_ITALIC: 'Ubuntu-BoldItalic',
+  UBUNTU_ITALIC: 'Ubuntu-Italic',
+  UBUNTU_LIGHT: 'Ubuntu-Light',
+  UBUNTU_LIGHT_ITALIC: 'Ubuntu-LightItalic',
+  UBUNTU_MEDIUM: 'Ubuntu-Medium',
+  UBUNTU_MEDIUM_ITALIC: 'Ubuntu-MediumItalic',
+  UBUNTU_REGULAR: 'Ubuntu-Regular',
+};

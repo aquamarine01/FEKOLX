@@ -2,7 +2,7 @@ import CategoryIcon from 'components/icons';
 import _ from 'lodash';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { CATEGORY, COLOR_SCHEME } from 'utils/constant';
+import { CATEGORY, COLOR_SCHEME, FONTS } from 'utils/constant';
 import { ReactSetter } from 'utils/interface';
 
 const Category = ({ category, currentCategory, setCurrentCategory }: Props) => {
@@ -65,6 +65,7 @@ const styles = StyleSheet.create({
   },
   category: {
     color: COLOR_SCHEME.DARK_BLUE,
+    fontFamily: FONTS.UBUNTU_REGULAR,
     textAlign: 'center',
     fontWeight: 'bold',
   },

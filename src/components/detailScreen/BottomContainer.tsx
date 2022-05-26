@@ -1,24 +1,20 @@
 import React from 'react';
 import _ from 'lodash';
-import { StyleSheet, Text, View } from 'react-native';
-import { COLOR_SCHEME, DEFAULT_PRODUCT } from 'utils/constant';
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
+import { COLOR_SCHEME, DEFAULT_PRODUCT, FONTS } from 'utils/constant';
 import { IProduct } from 'utils/interface';
 
 const BottomContainer = ({ title, price, description }: IProduct) => {
   return (
-    <View style={styles.mainContainer}>
-      <Text numberOfLines={1} style={styles.productText}>
-        {title ?? DEFAULT_PRODUCT.title}
-      </Text>
+    <ScrollView style={styles.mainContainer}>
+      <Text style={styles.productText}>{title ?? DEFAULT_PRODUCT.title}</Text>
       <Text style={[styles.productText, styles.priceTag]}>{`$ ${
         price ?? DEFAULT_PRODUCT.price
       }`}</Text>
       <View style={styles.textContainer}>
-        <Text numberOfLines={10} style={styles.description}>
-          {description ?? DEFAULT_PRODUCT.description}
-        </Text>
+        <Text style={styles.description}>{description ?? DEFAULT_PRODUCT.description}</Text>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
@@ -32,7 +28,7 @@ const styles = StyleSheet.create({
   },
   productText: {
     color: COLOR_SCHEME.WHITE_LIGHT,
-    fontWeight: 'bold',
+    fontFamily: FONTS.UBUNTU_BOLD,
     fontSize: 18,
   },
   priceTag: {
@@ -41,6 +37,7 @@ const styles = StyleSheet.create({
   },
   description: {
     marginTop: 10,
+    fontFamily: FONTS.UBUNTU_REGULAR,
     color: COLOR_SCHEME.WHITE_LIGHT,
     fontSize: 14,
     textAlign: 'justify',

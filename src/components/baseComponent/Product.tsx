@@ -2,20 +2,20 @@ import React from 'react';
 import _ from 'lodash';
 import { Image } from '@rneui/base';
 import { View, Text, StyleSheet, TouchableOpacity, Pressable } from 'react-native';
-import { COLOR_SCHEME, DEFAULT_PRODUCT, DIMENSION } from 'utils/constant';
+import { COLOR_SCHEME, DEFAULT_PRODUCT, DIMENSION, FONTS } from 'utils/constant';
 import { HomeProps, IProduct } from 'utils/interface';
 
 const Product = ({ id, image, title, price, navigation }: Props) => {
   return (
-    <View style={styles.mainContainer}>
-      <TouchableOpacity
-        activeOpacity={0.5}
-        onPress={() =>
-          navigation.push('Detail', {
-            productId: id,
-          })
-        }
-      >
+    <TouchableOpacity
+      activeOpacity={0.5}
+      onPress={() =>
+        navigation.push('Detail', {
+          productId: id,
+        })
+      }
+    >
+      <View style={styles.mainContainer}>
         <Image
           source={{
             uri: image ?? DEFAULT_PRODUCT.image,
@@ -30,14 +30,13 @@ const Product = ({ id, image, title, price, navigation }: Props) => {
             price ?? DEFAULT_PRODUCT.price
           }`}</Text>
         </View>
-      </TouchableOpacity>
-    </View>
+      </View>
+    </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
   mainContainer: {
-    // Multiple by 4 since padding by default being use in 4 sides (TRBL)
     width: (DIMENSION.WIDTH - DIMENSION.PADDING_HORIZONTAL * 6) / 2,
     padding: 5,
     height: 225,
@@ -54,11 +53,12 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   textContainer: {
+    width: '100%',
     marginTop: 10,
   },
   productText: {
     color: COLOR_SCHEME.WHITE_LIGHT,
-    fontWeight: 'bold',
+    fontFamily: FONTS.UBUNTU_BOLD,
   },
   priceTag: {
     marginTop: 5,
