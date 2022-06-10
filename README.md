@@ -12,3 +12,5 @@ Dikembangkan oleh mahasiswa kelas PAM RB:
 1. Muhammad Firdaus Sati (119140150)
 
 Aplikasi ini dikembangkan menggunakan React Native dan TypeScript.
+
+Build aplikasi dapat diunduh melalui link [berikut](https://drive.google.com/file/d/1DfSrmip9CiK9DZdDtR_BEcXTkDqR22p2/view?usp=sharing).
